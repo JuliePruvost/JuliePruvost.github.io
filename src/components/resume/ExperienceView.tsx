@@ -3,7 +3,7 @@ import moment from "moment";
 import { useCallback, useContext } from "react";
 import { createSetAction } from "reducer/commonAction";
 import { timelineContext } from "./TimelineContextProvider";
-import { experienceBarHeight, experienceBarHeightSpaceBetween, parseDate, Rect } from "./TimelineView";
+import { experienceBarHeight, parseDate, Rect } from "./TimelineView";
 
 export default function ExperienceView({
 }: {

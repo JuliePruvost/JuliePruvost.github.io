@@ -1,9 +1,12 @@
 import myResume from "data/resume";
 import moment from "moment";
-import ExperienceSvg from "./ExperienceSvg";
+import ExperienceBarSvg from "./ExperienceBarSvg";
+import ExperienceAreaSvg from "./ExperienceAreaSvg";
 import ExperienceView from "./ExperienceView";
 import { TimelineContextProvider } from "./TimelineContextProvider";
 import "./TimelineView.scss";
+import ExperienceLineSvg from "./ExperienceLineSvg";
+import XAxisSvg from "./XAxisSvg";
 
 export const parseDate = (date: string) => moment(date, "DD/MM/YYYY");
 
@@ -12,12 +15,12 @@ const getXFromDateFunction =
         dataArea.x + (date.diff(moment(minDate)) * dataArea.width) /
         moment(maxDate).diff(moment(minDate));
 
-export const experienceBarHeight = 20;
-export const experienceBarHeightSpaceBetween = 10;
-const startXMargin = 10;
-const endXMargin = 10;
-const startYMargin = 10;
-const endYMargin = 10;
+export const experienceBarHeight = 16;
+export const experienceBarAreaHeight = 32;
+const startXMargin = 32;
+const endXMargin = 16;
+const startYMargin = 32;
+const endYMargin = 16;
 const minDate = new Date(2002, 1, 1);
 const maxDate = new Date(2022, 12, 1);
 
@@ -48,8 +51,16 @@ export default function TimelineView({
     
     const getXFromDate = getXFromDateFunction(minDate, maxDate, dataArea);
 
-    const experiencesSvg = experiences.map((exp, index) => (
-        <ExperienceSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
+    const experienceLinesSvg = experiences.map((exp, index) => (
+        <ExperienceLineSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
+    ));
+
+    const experienceBarsSvg = experiences.map((exp, index) => (
+        <ExperienceBarSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
+    ));
+
+    const experienceAreasSvg = experiences.map((exp, index) => (
+        <ExperienceAreaSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
     ));
 
     return (
@@ -69,7 +80,11 @@ export default function TimelineView({
                         height={dataArea.height}
                     />
 
-                    {experiencesSvg}
+                    <XAxisSvg dataArea={dataArea} getXFromDate={getXFromDate} />
+
+                    {experienceLinesSvg}
+                    {experienceBarsSvg}
+                    {experienceAreasSvg}
                 </svg>
                 <ExperienceView />
             </div>

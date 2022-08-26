@@ -4,6 +4,12 @@
   background-color: #dee2e9;
 }
 
+:root {
+    --primary: #81899b;
+    --accent-color: rgb(231, 18, 185);
+    --warn: #dfa612;
+  }
+
 /*
 .App-logo {
   height: 40vmin;
