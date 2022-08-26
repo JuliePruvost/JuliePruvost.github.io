@@ -1,0 +1,25 @@
+
+
+.timeline-view {
+    background-color: aliceblue;
+}
+
+.timeline-data-area {
+    fill: #a3adbe;
+}
+
+.experience-area {
+    opacity: 0;
+    stroke: none;
+    &:hover {
+        fill: black;
+        opacity: 0.1;
+    }
+}
+
+.experience-bar {
+    fill: #c8dd0c;
+    &.selected {
+        fill: #dd9b0c;
+    }
+}
