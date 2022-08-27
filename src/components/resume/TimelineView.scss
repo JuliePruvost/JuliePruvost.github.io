@@ -1,0 +1,41 @@
+
+
+
+.timeline-view {
+    background-color: rgb(255, 255, 255);
+}
+
+.timeline-data-area {
+    fill: #ffffff;
+}
+
+.experience-area {
+    opacity: 0;
+    stroke: none;
+    &:hover {
+        fill: var(--accent-color);
+        opacity: 0.05;
+    }
+}
+
+.experience-bar {
+    fill: white;
+    stroke: var(--accent-color);
+    stroke-width: 1px;
+    &.selected {
+        fill: var(--accent-color);
+    }
+}
+
+.experience-line {
+    stroke: var(--accent-color);
+    stroke-opacity: 1;
+    stroke-width: 0.2px;
+    stroke-dasharray: 4;
+}
+
+.axis {
+    stroke: var(--accent-color);
+    stroke-opacity: 1;
+    stroke-width: 1px;
+}
