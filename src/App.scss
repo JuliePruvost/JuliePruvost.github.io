@@ -1,14 +1,24 @@
+@import "bootstrap-custom";
+
 .App {
   min-height: 100vh;
-  text-align: center;
-  background-color: #dee2e9;
+  // text-align: center;
+  // background-color: #dee2e9;
+  background-color: white;
 }
 
-:root {
-    --primary: #81899b;
-    --accent-color: rgb(231, 18, 185);
-    --warn: #dfa612;
-  }
+.page-title {
+    margin-bottom: 32px;
+    color: rgb(66, 86, 95);
+    font-family: Times;
+    font-size: 48px;
+
+    
+}
+
+h1::first-letter {
+    font-size: 140%;
+}
 
 /*
 .App-logo {

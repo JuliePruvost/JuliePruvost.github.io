@@ -1,0 +1,43 @@
+$jp-primary-color: rgb(66, 86, 95);
+$jp-accent-color: rgb(231, 18, 185);
+
+
+:root {
+    --primary-color: $jp-primary-color;
+    --accent-color: $jp-accent-color;
+}
+
+/* make the customizations */
+$primary: $jp-primary-color;
+$input-group-addon-bg: white;
+$input-group-addon-color: $jp-primary-color;
+$input-border-radius: 0px;
+
+$btn-border-radius: 0px;
+
+.form-group.required  {
+    .form-label:after {
+        content:" *";
+        color:$jp-accent-color;
+    }
+
+    .input-group-text:after {
+        content:" *";
+        color:$jp-accent-color;
+        margin-left: 4px;
+    }
+}
+  
+
+
+/*
+$theme-colors: (
+    "primary": tomato,
+    "info": tomato,
+    "danger": teal
+);
+*/
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+

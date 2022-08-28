@@ -11,8 +11,12 @@
     "@types/node": "^16.11.49",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "axios-hooks": "^3.1.4",
+    "bootstrap": "^5.2.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.7.4",
@@ -32,7 +36,7 @@
       "react-app/jest"
     ],
     "rules": {
-        "unused-imports/no-unused-imports": "info"
+      "unused-imports/no-unused-imports": "info"
     }
   },
   "browserslist": {
