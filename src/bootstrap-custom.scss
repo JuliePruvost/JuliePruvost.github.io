@@ -1,19 +1,35 @@
+
 $jp-primary-color: rgb(66, 86, 95);
+$jp-primary-dark-color: black;
+$jp-primary-dark-contrast-color: darken(white, 10);
+// $jp-primary-color: rgb(218, 142, 29);
 $jp-accent-color: rgb(231, 18, 185);
 
 
 :root {
-    --primary-color: $jp-primary-color;
-    --accent-color: $jp-accent-color;
+    --primary-color: #{$jp-primary-color};
+    --primary-color-l10: #{lighten($jp-primary-color, 10)};
+    --primary-dark-color: #{$jp-primary-dark-color};
+    --primary-dark-contrast-color: #{$jp-primary-dark-contrast-color};
+    --accent-color: #{$jp-accent-color};
 }
 
-/* make the customizations */
+/* GLOBAL */
+// color
 $primary: $jp-primary-color;
+// font
+$font-family-base: 'Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif';
+
+
+/* COMPONENT */
+// input
 $input-group-addon-bg: white;
 $input-group-addon-color: $jp-primary-color;
 $input-border-radius: 0px;
-
+// button
 $btn-border-radius: 0px;
+// navigation
+$nav-link-font-weight: 700;
 
 .form-group.required  {
     .form-label:after {
@@ -30,14 +46,6 @@ $btn-border-radius: 0px;
   
 
 
-/*
-$theme-colors: (
-    "primary": tomato,
-    "info": tomato,
-    "danger": teal
-);
-*/
-/* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
 
 

@@ -2,5 +2,15 @@
 .jp-contact-form {
     max-width: 600px;
     margin: 0px auto;
-    padding: 100px 0px;
+    // padding: 100px 0px;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-style: italic;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-style: italic;
+}
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    font-style: italic;
 }

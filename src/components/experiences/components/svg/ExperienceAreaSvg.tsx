@@ -2,8 +2,8 @@ import { IResume } from "data/resume";
 import moment from "moment";
 import { useCallback, useContext } from "react";
 import { createSetAction } from "reducer/commonAction";
-import { timelineContext } from "./TimelineContextProvider";
-import { experienceBarHeight, parseDate, Rect } from "./TimelineView";
+import { experiencesViewContext } from "../../ExperiencesViewContextProvider";
+import { experienceBarHeight, parseDate, Rect } from "../../Timeline";
 
 export default function ExperienceAreaSvg({
     resume,
@@ -16,7 +16,7 @@ export default function ExperienceAreaSvg({
     getXFromDate: (date: moment.Moment) => number;
     dataArea: Rect;
 }) {
-    const {dispatch} = useContext(timelineContext);
+    const {state, dispatch} = useContext(experiencesViewContext);
 
     const experience = resume.experiences[experienceIndex];
     const previousExperience = experienceIndex ? resume.experiences[experienceIndex-1] : null;
@@ -28,8 +28,16 @@ export default function ExperienceAreaSvg({
     const areaWidth = getXFromDate(endDate) - xArea;
     
     const onClick = useCallback(() => {
-        dispatch(createSetAction({selectedExperience: experience}))
-    }, [dispatch, experience])
+        dispatch(createSetAction({selectedExperience: experience}));
+    }, [dispatch, experience]);
+
+    const onMouseOver = useCallback(() => {
+        dispatch(createSetAction({hoveredExperience: experience}));
+    }, [dispatch, experience]);
+
+    const onMouseOut = useCallback(() => {
+        dispatch(createSetAction({hoveredExperience: undefined}));
+    }, [dispatch]);
 
     return (
         <rect
@@ -39,6 +47,8 @@ export default function ExperienceAreaSvg({
             width={areaWidth}
             height={dataArea.height}
             onClick={onClick}
+            onMouseOver={onMouseOver}
+            onMouseOut={onMouseOut}
         />
     );
 }

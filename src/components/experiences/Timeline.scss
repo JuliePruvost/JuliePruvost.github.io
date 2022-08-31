@@ -1,0 +1,73 @@
+.timeline-data-area {
+    // fill: #ffffff;
+}
+
+.experience-area {
+    opacity: 0;
+    stroke: none;
+    &:hover {
+        fill: var(--accent-color);
+        opacity: 0.05;
+    }
+}
+
+.experience-bar-mask {
+    fill: white;
+}
+
+.experience-bar-glow {
+    fill: #e96700;
+    filter: url(#moon-glow);
+    &.selected {
+        fill: var(--accent-color);
+    }
+}
+
+.experience-bar {
+    fill: #f9d9b6;
+    // stroke: var(--accent-color);
+    // stroke-width: 1px;
+    /*&.selected {
+        fill: var(--accent-color);
+    }*/
+}
+
+.experience-bar-underline.hovered {
+    fill: #f9d9b6;
+}
+.experience-bar-underline.selected {
+    fill: var(--accent-color);
+}
+
+
+.moon-cloud {
+    opacity: 0.8;
+}
+
+.bevel-color {
+    flood-color: #e96700;
+}
+
+.experience-bars-with-bevel {
+    filter: url(#bevel-effect-filter);
+}
+
+.experience-line {
+    stroke: var(--accent-color);
+    stroke-opacity: 1;
+    stroke-width: 0.2px;
+    stroke-dasharray: 4;
+}
+
+
+
+.axis {
+    stroke: var(--primary-dark-contrast-color);
+    stroke-opacity: 1;
+    stroke-width: 1px;
+}
+
+.axis-text {
+    fill: var(--primary-dark-contrast-color);
+    font-size: 14px;
+}

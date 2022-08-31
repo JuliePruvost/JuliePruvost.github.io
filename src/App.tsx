@@ -1,14 +1,10 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
-import TimelineView from "components/resume/TimelineView";
-import ContactView from "components/contact/ContactView";
+import Main from "components/navigation/Main";
 
 function App() {
     return (
         <div className="App">
-            <ContactView />
-            {/*<TimelineView width={800} height={400} />*/}
+            <Main />
         </div>
     );
 }
