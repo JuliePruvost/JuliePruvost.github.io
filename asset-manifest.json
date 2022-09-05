@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.74fb83da.js",
+    "main.css": "/static/css/main.e207b253.css",
+    "main.js": "/static/js/main.bdac3129.js",
     "static/js/787.3128eb09.chunk.js": "/static/js/787.3128eb09.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/silverlight.png": "/static/media/silverlight.885c2d53437340460945.png",
+    "static/media/volleyball.jpg": "/static/media/volleyball.7edec172f19c001c27a7.jpg",
+    "static/media/main.jpeg": "/static/media/main.96b7a3eeedfe79494a8f.jpeg",
+    "static/media/moons.jpeg": "/static/media/moons.2038f144b486819e9b89.jpeg",
+    "static/media/fashion.jpg": "/static/media/fashion.092cbaac06d94507d3f3.jpg",
+    "static/media/music.jpg": "/static/media/music.edf4cbf9cee2434bbc75.jpg",
+    "static/media/rainbow.jpg": "/static/media/rainbow.3dba66df71e8006a666f.jpg",
+    "static/media/dance.jpeg": "/static/media/dance.795a61eb5bba50ab50ed.jpeg",
+    "static/media/MainNavItem.svg": "/static/media/MainNavItem.fe886694c2cbdd7be46e229ad31f67fd.svg",
+    "static/media/GitHub.svg": "/static/media/GitHub.996c9f698d7d1c0cc5bffae596040556.svg",
+    "static/media/LinkedIn.svg": "/static/media/LinkedIn.a5865bf7b14674cdbc2c1532b5e01a7b.svg",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.74fb83da.js.map": "/static/js/main.74fb83da.js.map",
+    "main.e207b253.css.map": "/static/css/main.e207b253.css.map",
+    "main.bdac3129.js.map": "/static/js/main.bdac3129.js.map",
     "787.3128eb09.chunk.js.map": "/static/js/787.3128eb09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.74fb83da.js"
+    "static/css/main.e207b253.css",
+    "static/js/main.bdac3129.js"
   ]
 }
