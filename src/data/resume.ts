@@ -1,8 +1,17 @@
+export enum ExperienceComponent {
+    formation,
+    smartTrade,
+    sgRates,
+    cacib,
+    sgEBiz,
+    rok,
+    sgIwc
+}
 
 export interface IExperience {
     startDate: string;
     endDate: string;
-    location: string;
+    component: ExperienceComponent;
 }
 
 export interface IResume {
@@ -15,37 +24,37 @@ const myResume: IResume =
         {
             "startDate": "01/09/2002",
             "endDate": "01/10/2005",
-            "location": "Ecole Centrale Nantes"
+            "component": ExperienceComponent.formation
         },
         {
             "startDate": "01/06/2006",
             "endDate": "01/12/2006",
-            "location": "SmartTrade"
+            "component": ExperienceComponent.smartTrade
         },
         {
             "startDate": "01/12/2006",
             "endDate": "01/12/2009",
-            "location": "Société Générale CIB"
+            "component": ExperienceComponent.sgRates
         },
         {
             "startDate": "01/10/2010",
             "endDate": "01/05/2013",
-            "location": "Crédit Agricole CIB"
+            "component": ExperienceComponent.cacib
         },
         {
             "startDate": "01/05/2013",
             "endDate": "01/05/2014",
-            "location": "Société Générale CIB"
+            "component": ExperienceComponent.sgEBiz
         },
         {
             "startDate": "01/08/2014",
             "endDate": "01/09/2015",
-            "location": "Rok Solution"
+            "component": ExperienceComponent.rok
         },
         {
             "startDate": "01/10/2017",
             "endDate": "01/10/2022",
-            "location": "Société Générale CIB"
+            "component": ExperienceComponent.sgIwc
         }
     ]
 };

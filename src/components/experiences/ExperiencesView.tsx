@@ -7,11 +7,10 @@ export default function ExperiencesView({
 }) {
     
     return (
-        <>
+        <ExperiencesViewContextProvider>
             <TimelineView />
-
             <ExperienceView />
-        </>
+        </ExperiencesViewContextProvider>
 
     );
 }

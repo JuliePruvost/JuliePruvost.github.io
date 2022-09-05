@@ -1,5 +1,5 @@
 
-$jp-primary-color: rgb(66, 86, 95);
+$jp-primary-color: rgb(56, 73, 80);
 $jp-primary-dark-color: black;
 $jp-primary-dark-contrast-color: darken(white, 10);
 // $jp-primary-color: rgb(218, 142, 29);
@@ -9,6 +9,8 @@ $jp-accent-color: rgb(231, 18, 185);
 :root {
     --primary-color: #{$jp-primary-color};
     --primary-color-l10: #{lighten($jp-primary-color, 10)};
+    --primary-color-l20: #{lighten($jp-primary-color, 20)};
+    --primary-color-l30: #{lighten($jp-primary-color, 30)};
     --primary-dark-color: #{$jp-primary-dark-color};
     --primary-dark-contrast-color: #{$jp-primary-dark-contrast-color};
     --accent-color: #{$jp-accent-color};

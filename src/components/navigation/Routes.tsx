@@ -1,5 +1,6 @@
 import ContactView from "components/contact/ContactView";
-import TimelineView from "components/experiences/TimelineView";
+import ExperiencesView from "components/experiences/ExperiencesView";
+import LifestyleView from "components/lifestyle/LifestyleView";
 import { useRoutes, RouteObject } from "react-router-dom";
 
 export type RouteDescription = RouteObject & {
@@ -12,13 +13,13 @@ const createRouteDescription = (label: string, urlSegment: string, element: JSX.
     element: element
 });
 
-export const mainRoute = createRouteDescription('Main', '/', <TimelineView />);
+export const mainRoute = createRouteDescription('Main', '/', <ExperiencesView />);
 
 export const routeDescriptions: RouteDescription[] = [
     mainRoute,
-    createRouteDescription('EXPERIENCES', 'experiences', <TimelineView />),
+    createRouteDescription('EXPERIENCES', 'experiences', <ExperiencesView />),
     createRouteDescription('CONTACT', 'contact', <ContactView />),
-    createRouteDescription('LIFESTYLE', 'lifestyle', <ContactView />)
+    createRouteDescription('LIFESTYLE', 'lifestyle', <LifestyleView />)
 ];
 
 export default function Routes() {

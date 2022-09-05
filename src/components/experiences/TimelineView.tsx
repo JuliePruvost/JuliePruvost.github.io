@@ -38,17 +38,14 @@ export default function TimelineView({
             return;
         }
         setWidth(ref.current.offsetWidth)
-        console.log('width', ref.current ? ref.current.offsetWidth : 0);
     }, [windowWidth]);
 
     return (
-        <ExperiencesViewContextProvider>
-            <div className="timeline-wrapper">
-                <div ref={ref} className="timeline-view">
-                    <img src={moonImage} alt="Moons" width={width} />
-                    <Timeline height={120} width={width} />
-                </div>
+        <div className="timeline-wrapper">
+            <div ref={ref} className="timeline-view">
+                <img src={moonImage} alt="Moons" width={width} />
+                <Timeline height={120} width={width} />
             </div>
-        </ExperiencesViewContextProvider>
+        </div>
     );
 }
