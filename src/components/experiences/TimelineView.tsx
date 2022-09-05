@@ -1,7 +1,6 @@
 import "./TimelineView.scss";
 import Timeline from "./Timeline";
 import { useRef, useEffect, LegacyRef, MutableRefObject, useState, useLayoutEffect } from "react";
-import moonImage from './components/moons.jpeg';
 import { ExperiencesViewContextProvider } from "./ExperiencesViewContextProvider";
 
 export type Rect = {
@@ -43,8 +42,7 @@ export default function TimelineView({
     return (
         <div className="timeline-wrapper">
             <div ref={ref} className="timeline-view">
-                <img src={moonImage} alt="Moons" width={width} />
-                <Timeline height={120} width={width} />
+                <Timeline dataHeight={120} width={width} />
             </div>
         </div>
     );

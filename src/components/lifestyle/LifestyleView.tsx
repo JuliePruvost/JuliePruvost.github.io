@@ -10,7 +10,7 @@ export default function LifestyleView () {
         <div className='lifestyle-view-wrapper'>
             <div className='lifestyle-view-item left'>
                 <div className='lifestyle-view-item-content'>
-                    <img src={rainbow} alt="Rainbow" width={400} height={600}  />
+                    <img src={rainbow} alt="Rainbow"   />
                     {/*<div style={{backgroundImage: `url(${rainbow})`, width: 400, height: 600}}   >
                     </div>*/}
                     <div className='lifestyle-text left'>
@@ -33,12 +33,12 @@ export default function LifestyleView () {
                             Sports plays a big role in my life. Volleyball shares great team spirit values. I have been playing for 5 years and now play competitively with several teams. I like to practice to improve my techniques and I really enjoy teaching new players.
                         </p>
                     </div>
-                    <img src={volleyball} alt="VolleyBall" width={400} height={600}  />
+                    <img src={volleyball} alt="VolleyBall"   />
                 </div>
             </div>
             <div className='lifestyle-view-item left'>
                 <div className='lifestyle-view-item-content left'>
-                    <img src={fashion} alt="Fashion" width={400} height={600}  />
+                    <img src={fashion} alt="Fashion"   />
                     <div className='lifestyle-text left'>
                         <div className='lifestyle-image-header'>
                             Slow Fashion
@@ -59,12 +59,12 @@ export default function LifestyleView () {
                             For a very long time, dancing was an activity totally absent from my life. Starting hip-hop dance classes last year turned out to be a great lesson in humility. I usually try to go party once a week ! Yay !
                         </p>
                     </div>
-                    <img src={dance} alt="Dance" width={400} height={600}  />
+                    <img src={dance} alt="Dance"   />
                 </div>
             </div>
             <div className='lifestyle-view-item left'>
                 <div className='lifestyle-view-item-content left'>
-                    <img src={music} alt="Music" width={400} height={600}  />
+                    <img src={music} alt="Music"   />
                     <div className='lifestyle-text left'>
                         <div className='lifestyle-image-header'>
                             Music

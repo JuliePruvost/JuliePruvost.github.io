@@ -12,7 +12,6 @@
 .lifestyle-view-item {
     width: 100%;
     display: block;
-    height: 600px;
     /* text-align: left; */
     &.left {
         margin-right: auto;
@@ -33,6 +32,14 @@
         // display: block;
     }
     &.right {
+    }
+    @media screen and (max-width: 768px) {
+        gap: 12px;
+    }
+    img {
+        @media screen and (max-width: 768px) {
+            width: 260px;
+        }
     }
 }
 

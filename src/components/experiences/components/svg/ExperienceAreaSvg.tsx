@@ -9,12 +9,12 @@ export default function ExperienceAreaSvg({
     resume,
     experienceIndex,
     getXFromDate,
-    dataArea,
+    svgArea,
 }: {
     resume: IResume;
     experienceIndex: number;
     getXFromDate: (date: moment.Moment) => number;
-    dataArea: Rect;
+    svgArea: Rect;
 }) {
     const {state, dispatch} = useContext(experiencesViewContext);
 
@@ -43,9 +43,9 @@ export default function ExperienceAreaSvg({
         <rect
             className="experience-area"
             x={xArea}
-            y={dataArea.y}
+            y={0}
             width={areaWidth}
-            height={dataArea.height}
+            height={svgArea.height}
             onClick={onClick}
             onMouseOver={onMouseOver}
             onMouseOut={onMouseOut}

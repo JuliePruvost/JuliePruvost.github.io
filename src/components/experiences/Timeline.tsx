@@ -8,6 +8,7 @@ import XAxisSvg from "./components/svg/XAxisSvg";
 import "./Timeline.scss";
 import BevelEffectFilter from "./components/svg/BevelEffectFilter";
 import ExperienceFlatBarSvg from "./components/svg/ExperienceFlatBarSvg";
+import moonImage from './components/moons.jpeg';
 
 export const parseDate = (date: string) => moment(date, "DD/MM/YYYY");
 
@@ -19,9 +20,8 @@ const getXFromDateFunction =
 export const experienceBarY = 32;
 export const experienceBarHeight = 4;
 export const experienceBarAreaHeight = 0;
-const startXMargin = 32;
 const endXMargin = 16;
-const startYMargin = 26;
+const startXMargin = 32;
 const endYMargin = 16;
 const minDate = new Date(2002, 1, 1);
 const maxDate = new Date(2022, 12, 1);
@@ -36,23 +36,33 @@ export type Rect = {
 
 export default function Timeline({
     width,
-    height,
+    dataHeight,
 }: {
     width: number;
-    height: number;
+    dataHeight: number;
 }) {
     const resume = myResume;
     const experiences = resume.experiences;
     
+    const moonHeight = 306 * width / 1268;
+    const startYMargin = moonHeight + 32;
+
+    const svgArea: Rect = {
+        x: 0,
+        y: 0,
+        width: width,
+        height: moonHeight + dataHeight
+    };
+
     const dataArea: Rect = {
         x: startXMargin,
         y: startYMargin,
         width: width - startXMargin - endXMargin,
-        height: height - startYMargin - endYMargin
+        height: dataHeight
     }
     
     const getXFromDate = getXFromDateFunction(minDate, maxDate, dataArea);
-
+    /*
     const experienceLinesSvg = experiences.map((exp, index) => (
         <ExperienceLineSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
     ));
@@ -66,7 +76,7 @@ export default function Timeline({
             <ExperienceBarSvg className="experience-bar" resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
         </g>
     ));
-
+    */
     const experienceFlatBarsSvg = experiences.map((exp, index) => (
         <ExperienceFlatBarSvg className="experience-bar" resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
     ));
@@ -76,13 +86,13 @@ export default function Timeline({
     ));
 
     const experienceAreasSvg = experiences.map((exp, index) => (
-        <ExperienceAreaSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
+        <ExperienceAreaSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} svgArea={svgArea}/>
     ));
 
     return (
         <div>
             <svg
-                height={height}
+                height={moonHeight + dataHeight}
                 width={width}
             >
                 <rect
@@ -96,6 +106,8 @@ export default function Timeline({
                     <ExperienceBarBlurEffectSvg />
                     <BevelEffectFilter />
                 </defs>
+                <image href={moonImage} width={width}  />
+
                 <XAxisSvg dataArea={dataArea} getXFromDate={getXFromDate} />
 
                 {experienceBarsGlow}

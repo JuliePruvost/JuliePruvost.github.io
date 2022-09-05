@@ -6,8 +6,8 @@
     opacity: 0;
     stroke: none;
     &:hover {
-        fill: var(--accent-color);
-        opacity: 0.05;
+        fill: #e96700;
+        opacity: 0.01;
     }
 }
 
@@ -58,8 +58,6 @@
     stroke-width: 0.2px;
     stroke-dasharray: 4;
 }
-
-
 
 .axis {
     stroke: var(--primary-dark-contrast-color);

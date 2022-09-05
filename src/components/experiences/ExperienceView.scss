@@ -30,6 +30,10 @@
     margin: 0 48px ;
     padding: 16px 0;
 
+    @media screen and (max-width: 768px) {
+        margin: 0 12px;
+    }
+
     &.position {
         color: var(--accent-color);
         font-weight: bolder;
@@ -44,6 +48,7 @@
     }
     &.list {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         gap: 16px;
     }
