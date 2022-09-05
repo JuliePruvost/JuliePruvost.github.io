@@ -28,7 +28,8 @@
     }
     img {
         @media screen and (max-width: 768px) {
-            width: 260px;
+            max-width: 50%;
+            object-fit: contain;
         }
     }
 }
@@ -43,10 +44,16 @@
     font-size: 48px;
     font-family: Times;
     font-weight: bold;
+    @media screen and (max-width: 768px) {
+        font-size: 36px;
+    }
 }
 
 .main-image-description {
     font-size: 18px;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .main-image-description-highlighted {
