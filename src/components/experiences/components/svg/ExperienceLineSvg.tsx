@@ -1,6 +1,6 @@
 import { IResume } from "data/resume";
 import moment from "moment";
-import { experienceBarHeight, experienceBarAreaHeight, parseDate, Rect } from "./TimelineView";
+import { experienceBarHeight, experienceBarAreaHeight, parseDate, Rect } from "../../Timeline";
 
 export default function ExperienceLineSvg({
     resume,

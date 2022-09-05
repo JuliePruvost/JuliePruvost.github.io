@@ -43,17 +43,17 @@ export default function ContactForm() {
         <Form onSubmit={onSubmit} action="javascript:void(0);">
             <Form.Group className="mb-3 form-group required">
                 <Form.Label>Email Address</Form.Label>
-                <Form.Control required id="email" type="email" name="email" placeholder="your-address@mail.com" />
+                <Form.Control required id="email" type="email" name="email" placeholder="Please enter your Email Address" />
             </Form.Group>
             
             <Form.Group className="mb-3 form-group required">
                 <Form.Label>Subject</Form.Label>
-                <Form.Control required id="subject" name="subject"  />
+                <Form.Control required id="subject" name="subject" placeholder="Please enter a subject" />
             </Form.Group>
 
             <Form.Group className="mb-3 form-group required">
                 <Form.Label>Message</Form.Label>
-                <Form.Control required as="textarea" rows={3} id="message" name="message" />
+                <Form.Control required as="textarea" rows={3} id="message" name="message" placeholder="Please enter your message" />
             </Form.Group>
             <div className="d-grid">
                 <Button type="submit" disabled={loading}>

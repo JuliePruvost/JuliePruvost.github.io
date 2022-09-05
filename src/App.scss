@@ -5,15 +5,14 @@
   // text-align: center;
   // background-color: #dee2e9;
   background-color: white;
+  color: var(--primary-color);
 }
 
 .page-title {
     margin-bottom: 32px;
-    color: rgb(66, 86, 95);
+    color: var(--primary-color);
     font-family: Times;
     font-size: 48px;
-
-    
 }
 
 h1::first-letter {

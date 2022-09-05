@@ -1,6 +1,6 @@
 import { IResume } from "data/resume";
 import moment from "moment";
-import { experienceBarHeight, experienceBarAreaHeight, parseDate, Rect } from "./TimelineView";
+import { experienceBarHeight, experienceBarAreaHeight, parseDate, Rect } from "../../Timeline";
 
 export default function XAxisSvg({
     dataArea,
@@ -24,6 +24,7 @@ export default function XAxisSvg({
         return (
             <>
                 <text 
+                    className={"axis-text"}
                     x={x} 
                     y={dataArea.y - 15}
                     text-anchor="middle"
@@ -48,7 +49,7 @@ export default function XAxisSvg({
                 className={"axis"}
                 x1={dataArea.x}
                 y1={dataArea.y}
-                x2={dataArea.width}
+                x2={dataArea.x + dataArea.width}
                 y2={dataArea.y}
             />
         </>

@@ -1,21 +1,23 @@
 import { IResume } from "data/resume";
 import moment from "moment";
 import { useCallback, useContext } from "react";
-import { timelineContext } from "./TimelineContextProvider";
-import { experienceBarHeight, experienceBarAreaHeight, parseDate, Rect } from "./TimelineView";
+import { experiencesViewContext } from "../../ExperiencesViewContextProvider";
+import { experienceBarHeight, experienceBarAreaHeight, parseDate, Rect, experienceBarY } from "../../Timeline";
 
 export default function ExperienceBarSvg({
     resume,
     experienceIndex,
     getXFromDate,
     dataArea,
+    className
 }: {
     resume: IResume;
     experienceIndex: number;
     getXFromDate: (date: moment.Moment) => number;
     dataArea: Rect;
+    className: string;
 }) {
-    const {state} = useContext(timelineContext);
+    const {state} = useContext(experiencesViewContext);
 
     const experience = resume.experiences[experienceIndex];
     const startDate = parseDate(experience.startDate);
@@ -24,12 +26,13 @@ export default function ExperienceBarSvg({
     const width = getXFromDate(endDate) - x;
 
     return (
+        
         <rect
-            className={state.selectedExperience === experience ? "experience-bar selected" : "experience-bar"}
+            className={state.selectedExperience === experience ? `${className} selected` : className}
             x={x}
-            y={dataArea.y + experienceIndex * (experienceBarAreaHeight) + experienceBarAreaHeight}
+            y={experienceBarY + dataArea.y + experienceIndex * (experienceBarAreaHeight) + experienceBarAreaHeight}
             width={width}
-            height={experienceBarHeight}
+            height={8}
             rx={8}
             ry={8}
         />

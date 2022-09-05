@@ -1,0 +1,92 @@
+.experience-wrapper {
+    // fill: #ffffff;
+}
+.experience-wrapper {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 24px auto ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.experience-item {
+    flex-basis: 50%;
+    &.long {
+        flex-basis: 100%;
+    }
+    &.hidden {
+        display: none;
+    }
+}
+
+.experience-item-title {
+    text-transform: uppercase;
+    color: var(--primary-color-l30);
+    font-size: smaller;
+}
+
+.experience-item-content {
+    margin: 0 48px ;
+    padding: 16px 0;
+
+    &.position {
+        color: var(--accent-color);
+        font-weight: bolder;
+    }
+    &.period {
+        font-weight: bolder;
+    }
+    &.hidden {
+        font-weight: bolder;
+    }
+    &.company {
+    }
+    &.list {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li:before {
+        content: "-";
+        display: inline-block;
+        width: 20px;
+    }
+}
+
+.experience-item-content-highlighted {
+    font-weight: bolder;
+    &.special {
+        color: var(--accent-color);
+    }
+}
+
+
+.experience-labeled-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.big {
+        svg {
+            width: 48px;
+            height: 48px;
+        }
+    }
+    &.small {
+        svg {
+            width: 32px;
+            height: 24px;
+        }
+    }
+}
+
+.techno-item-net {
+    color: #512BD4;
+}
+

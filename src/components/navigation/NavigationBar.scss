@@ -1,0 +1,45 @@
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 8px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    text-underline-offset: 8px;
+    &.active {
+        text-decoration-color: var(--accent-color);
+    }
+}
+
+.main-nav-item {
+    fill:var(--primary-color);
+    stroke: var(--primary-color);
+
+    .main-nav-item-underline {
+        opacity: 0;
+        stroke: var(--accent-color);
+    }
+    &:hover {
+        .main-nav-item-underline {
+            opacity: 1;
+            stroke: var(--primary-color);
+        }
+    }
+    &.active {
+        .main-nav-item-underline {
+            opacity: 1;
+            stroke: var(--accent-color);
+        }
+    }
+}
+
+.common-nav-item {
+    padding-top: 23px;
+}
+
+.nav {
+    padding: 24px;
+}
