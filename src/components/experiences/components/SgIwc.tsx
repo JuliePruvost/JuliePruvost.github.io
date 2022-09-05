@@ -21,15 +21,15 @@ export default function SgIwc() {
             <ExperienceItem itemTitle="Key Projects / Roles" className="long">
                 <ul>
                     <li>Revamping of the old AngularJS website to <HighSpecial>React</HighSpecial> (~50 internal users). Creation of 2 smaller websites.</li>
-                    <li>Slicing of the existing monolithic (.Net) api to <High>micro sercices</High> (.Net Core) with <High>load balancing</High>, <High>monitoring</High> with elk and grafana.</li>
+                    <li>Slicing of the existing monolithic (.Net) api to <High>micro services</High> (.Net Core) with <High>load balancing</High>, <High>monitoring</High> with elk and grafana.</li>
                     <li>Development of a computing grid running python scripts.</li>
                     <li>Mentoring of newcomers, code quality manager.</li>
                 </ul>
             </ExperienceItem>
             <ExperienceItem itemTitle="Results / Benefits" className="long">
                 <ul>
-                    <li>Great improvement on grid performance (x5 faster) on nighlty python script batch.</li>
-                    <li>{'Time to Market reduced (>2 weeks to 1) for new group of users to join the platform.'}</li>
+                    <li>Great improvement on grid performance (x5 faster) on nightly python script batch.</li>
+                    <li>Time to Market reduced {'(>2 weeks to 1)'} for new group of users to join the platform.</li>
                     <li>Production issues have largely decreased, and alerts now often notify us of issues before the users are impacted.</li>
                     <li>Thanks to my involvement in production issues, my good communication with adjacent teams, and the quality of my work, I moved <High>from Consultant to Employee</High> at Société Générale.</li>
                     <li>This first experience in the web/javascript world made me realize how passionate I am about designing good user-friendly interfaces. I will orient my career towards more <HighSpecial>web-focused</HighSpecial> technologies.</li>
