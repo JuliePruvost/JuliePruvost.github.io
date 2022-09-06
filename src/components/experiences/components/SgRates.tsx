@@ -18,9 +18,9 @@ export default function SgRates() {
             <ExperienceItem itemTitle="Team" className="web-only">
                 4 members with <High>junior</High> skill level
             </ExperienceItem>
-            <ExperienceItem itemTitle="Key Projects / Roles">
+            <ExperienceItem itemTitle="Key Projects / Roles" className="long">
                 <ul>
-                    <li>Migration of C++ applications to <High>.Net.</High></li>
+                    <li>Migration of C++ applications to <High>.NET.</High></li>
                     <li>Integration of new negotiation workflows {'(RFQ - D2C)'}.</li>
                     <li>Focus on <High>unit tests</High> and functional tests.</li>
                 </ul>

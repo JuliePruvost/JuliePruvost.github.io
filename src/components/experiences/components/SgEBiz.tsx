@@ -18,14 +18,14 @@ export default function SgEBiz() {
             <ExperienceItem itemTitle="Team">
                 3 members with junior-mid skill level.
             </ExperienceItem>
-            <ExperienceItem itemTitle="Key Projects / Roles">
+            <ExperienceItem itemTitle="Key Projects / Roles" className="long">
                 <ul>
-                    <li>Migration of the existing Java platform to .Net windows services.</li>
+                    <li>Migration of the existing Java platform to .NET windows services.</li>
                     <li>Development of a UI client in <High>WPF</High></li>
                 </ul>
             </ExperienceItem>
-            <ExperienceItem itemTitle="Techno">
-                <High>.Net 4.5</High>, Entity Framework, WPF, WCF, ActiveMQ, Infragistics, SqlServer, Jenkins, Subversion
+            <ExperienceItem itemTitle="Techno" className="long">
+                <High>.NET 4.5</High>, Entity Framework, WPF, WCF, ActiveMQ, Infragistics, SqlServer, Jenkins, Subversion
             </ExperienceItem>
         </>
     );

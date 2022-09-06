@@ -12,7 +12,7 @@ export default function SmartTrade() {
             <ExperienceItem itemTitle="Company">
                 <High>SmartTrade</High>
             </ExperienceItem>
-            <ExperienceItem itemTitle="Key Projects / Roles">
+            <ExperienceItem itemTitle="Key Projects / Roles" className="long">
                 <ul>
                     <li>Additional feature on the SmartTrade server <High>JAVA</High></li>
                     <li>Creation of views on the web client in <High>Google Web Toolkit</High></li>

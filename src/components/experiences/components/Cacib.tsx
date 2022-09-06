@@ -18,14 +18,14 @@ export default function Cacib() {
             <ExperienceItem itemTitle="Team">
                 6 members with <High>senior</High> skill level {'(4 on core, 2 on market making).'}
             </ExperienceItem>
-            <ExperienceItem itemTitle="Key Projects / Roles">
+            <ExperienceItem itemTitle="Key Projects / Roles" className="long">
                 <ul>
                     <li>Development of high frequency order sending automatons, with <HighSpecial>real time</HighSpecial>, <HighSpecial>low latency</HighSpecial>, <HighSpecial>multi threaded</HighSpecial> environment.</li>
                     <li>Extensions of the Monolith Windows Form application with views to control automatic Hedge</li>
                 </ul>
             </ExperienceItem>
-            <ExperienceItem itemTitle="Techno">
-                <High>.Net 3.5</High>, WinForms, Syncfusion, Oracle, Subversion
+            <ExperienceItem itemTitle="Techno" className="long">
+                <High>.NET 3.5</High>, WinForms, Syncfusion, Oracle, Subversion
             </ExperienceItem>
         </>
     );

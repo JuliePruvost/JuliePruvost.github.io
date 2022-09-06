@@ -32,7 +32,7 @@ export default function MainView({
                             I am Julie Pruvost
                         </p>
                         <p className='main-image-description'>
-                            Senior Developer with 13 years of experience with great expertise in Microsoft <High>.Net</High>.
+                            Senior Developer with 13 years of experience with great expertise in Microsoft <High>.NET</High>.
                         </p>
                         <p className='main-image-description'>
                             Currently working at Société Générale, as <HighSpecial>Tech Lead</HighSpecial>.

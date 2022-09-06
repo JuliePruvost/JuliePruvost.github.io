@@ -21,7 +21,7 @@ export default function SgIwc() {
             <ExperienceItem itemTitle="Key Projects / Roles" className="long">
                 <ul>
                     <li>Revamping of the old AngularJS website to <HighSpecial>React</HighSpecial> (~50 internal users). Creation of 2 smaller websites.</li>
-                    <li>Slicing of the existing monolithic (.Net) api to <High>micro services</High> (.Net Core) with <High>load balancing</High>, <High>monitoring</High> with elk and grafana.</li>
+                    <li>Slicing of the existing monolithic (.NET) api to <High>micro services</High> (.NET Core) with <High>load balancing</High>, <High>monitoring</High> with elk and grafana.</li>
                     <li>Development of a computing grid running python scripts.</li>
                     <li>Mentoring of newcomers, code quality manager.</li>
                 </ul>
