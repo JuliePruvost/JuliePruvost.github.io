@@ -41,18 +41,18 @@
 
 .main-image-header {
     color: var(--accent-color);
-    font-size: 48px;
+    font-size: 3rem;
     font-family: Times;
     font-weight: bold;
-    @media screen and (max-width: 768px) {
-        font-size: 36px;
+    @media screen and (max-width: 480px) {
+        font-size: 1.6rem;
     }
 }
 
 .main-image-description {
-    font-size: 18px;
-    @media screen and (max-width: 768px) {
-        font-size: 14px;
+    font-size: 1.1rem;
+    @media screen and (max-width: 480px) {
+        font-size: 0.8rem;
     }
 }
 
