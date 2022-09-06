@@ -21,7 +21,7 @@ export default function MainView({
         <div className='main-view-wrapper'>
             <div className='main-view-item'>
                 <div className='main-view-item-content'>
-                    <img src={mainImage} alt="hi" width={400} height={600}  />
+                    <img src={mainImage} alt="hi"  />
                     {/*<div style={{backgroundImage: `url(${rainbow})`, width: 400, height: 600}}   >
                     </div>*/}
                     <div className='main-text'>

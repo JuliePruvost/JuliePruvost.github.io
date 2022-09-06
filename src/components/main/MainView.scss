@@ -3,10 +3,10 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 48px;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    @media screen and (max-width: 768px) {
+    }
 }
 
 .main-view-item {
