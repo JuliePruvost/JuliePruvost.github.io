@@ -45,7 +45,7 @@ export default function NavigationBar() {
     return (
         <Container>
         <Navbar expand="sm" expanded={expanded}>
-            <Container>
+            <Container >
                 <Navbar.Brand href="#home"><MainNavigationItem /></Navbar.Brand>
                 <Navbar.Toggle onClick={onToggleClick} aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
