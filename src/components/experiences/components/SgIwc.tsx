@@ -1,10 +1,10 @@
 import { ExperienceItem, High, HighSpecial, LabeledIcon, netIcon, reactIcon, typeScriptIcon, LabeledIconSmall, reduxIcon, semanticIcon, agGridIcon, jestIcon, graphQLIcon, sqlServerIcon, mongoDbIcon, rabbitMqIcon, redisIcon, elasticSearchIcon, grafanaIcon, githubIcon, teamcityIcon, octopusIcon } from "./ExperienceHelper";
 
-export default function SgIwc() {
+export default function SgIwc({isForPrint}: {isForPrint?: boolean}) {
     return (
         <>
-            <ExperienceItem itemTitle="Period" className="period long" hidden>
-                October 2017 to today
+            <ExperienceItem itemTitle="Period" className="period long" hidden={!isForPrint}>
+                October 2017 to Today
             </ExperienceItem>
             <ExperienceItem itemTitle="Position">
                 TECH LEAD

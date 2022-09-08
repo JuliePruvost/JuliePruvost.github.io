@@ -1,0 +1,43 @@
+/*@page { 
+    margin: 100px 100px 100px 100px !important; 
+    // size: 200mm 50mm;
+}*/
+
+@page {
+    size: auto;
+    margin: 20mm;
+  }
+
+
+@media all {
+    .pagebreak {
+      display: none;
+    }
+}
+
+@media print {
+    html, body {
+        height: initial !important;
+        overflow: initial !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    /*.pagebreak {
+      page-break-before: always;
+    }*/
+    .experience-item {
+        page-break-inside: avoid;
+    }
+
+    .page-break {
+        margin-top: 1rem;
+        display: block;
+        page-break-before: auto;
+    }
+}
+
+.resume-wrapper {
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+}

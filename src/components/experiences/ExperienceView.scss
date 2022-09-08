@@ -11,13 +11,14 @@
 }
 
 .experience-item {
-    flex-basis: 50%;
+    width: 50%;
     &.long {
-        flex-basis: 100%;
+        width: 100%;
     }
     &.hidden {
         display: none;
     }
+    display: inline-block;
 }
 
 .experience-item-title {
