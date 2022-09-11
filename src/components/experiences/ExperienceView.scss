@@ -11,13 +11,15 @@
 }
 
 .experience-item {
-    flex-basis: 50%;
+    width: 50%;
     &.long {
-        flex-basis: 100%;
+        width: 100%;
     }
     &.hidden {
         display: none;
     }
+    display: inline-block;
+    vertical-align: top;
 }
 
 .experience-item-title {
@@ -27,8 +29,11 @@
 }
 
 .experience-item-content {
-    margin: 0 48px ;
+    margin: 0 36px 0 48px;
     padding: 16px 0;
+
+    color: var(--primary-color-l30);
+
 
     @media screen and (max-width: 768px) {
         margin: 0 12px;
@@ -36,13 +41,13 @@
 
     &.position {
         color: var(--accent-color);
-        font-weight: bolder;
+        font-weight: 500;
     }
     &.period {
-        font-weight: bolder;
+        font-weight: 500;
     }
     &.hidden {
-        font-weight: bolder;
+        font-weight: 500;
     }
     &.company {
     }
@@ -66,7 +71,8 @@
 }
 
 .experience-item-content-highlighted {
-    font-weight: bolder;
+    font-weight: 500;
+    color: var(--primary-color);
     &.special {
         color: var(--accent-color);
     }

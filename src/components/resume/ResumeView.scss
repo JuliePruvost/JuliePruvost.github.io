@@ -1,0 +1,116 @@
+@page {
+    size: auto;
+    margin: 20mm;
+}
+
+@media all {
+    .pagebreak {
+      display: none;
+    }
+}
+
+@media print {
+    html, body {
+        height: initial !important;
+        overflow: initial !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-size: 14px;
+    }
+
+    .experience-item {
+        page-break-inside: avoid;
+    }
+
+    .resume-horizontal-line {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+
+    .page-break {
+        margin-top: 1rem;
+        display: block;
+        page-break-before: always;
+    }  
+}
+
+.resume-vertical-line {
+    width: 1px;
+    height: 100%;
+    background-color: var(--accent-color);
+    display: table-cell;
+}
+
+.resume-vertical-line-separator {
+    padding: 0px 0px 0px 50px;
+    width: 1px;
+    height: 100%;
+    display: table-cell;
+}
+
+.resume-experience-separator {
+    height: 1px;
+    width: 50%;
+    margin: 80px auto;
+    background-color: var(--accent-color);
+}
+
+.resume-wrapper {
+
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+}
+
+.resume-experience-container {
+    padding: 0px 0px 0px 50px;
+}
+
+.resume-section-title {
+    margin: 32px 0 16px 130px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: large;
+}
+
+.resume-overview {
+    font-size: larger;
+
+}
+
+.resume-overview-header {
+    padding: 0 0 16px 130px;
+    width: 100%;
+    font-size: x-large;
+
+    .name {
+        font-size: larger;
+    }
+
+    .position {
+        width: 100%;
+        display: flex;
+
+        .title {
+
+            text-transform: uppercase;
+            color: var(--accent-color);
+        }
+        .experience {
+            flex: 1 1 auto;
+            text-align: end;
+            color: var(--primary-color-l30);
+        }
+    }
+}
+
+.resume-footer {
+    margin: 0 0 0 130px;
+    position: fixed;
+    bottom: 0;
+    color: var(--primary-color-l30);
+
+    span {
+        color: var(--accent-color);
+    }
+}
