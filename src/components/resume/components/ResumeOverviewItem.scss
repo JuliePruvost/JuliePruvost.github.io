@@ -1,0 +1,45 @@
+.resume-overview-item {
+    min-height: 64px;
+    display: flex;
+    &:last-child {
+        min-height: unset;
+    }
+}
+
+.resume-overview-item-time {
+    text-align: end;
+    margin: 0 30px 0 0;
+    flex: 0 0 100px;
+    text-transform: uppercase;
+    color: var(--primary-color-l30);    
+}
+
+.resume-overview-item-vertical-line {
+    width: 1px;
+    height: auto;
+    background-color: var(--accent-color);
+}
+
+.resume-overview-item-content {
+    margin: 0 0 0 50px;
+    flex: 1 1 auto;
+}
+
+.resume-overview-item-main {
+    font-weight: 500;
+}
+
+.resume-overview-item-secondary {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    color: var(--accent-color);
+}
+
+.resume-overview-item-description {
+}
+
+.resume-overview-item-rich-description {
+    color: var(--primary-color-l30);
+}

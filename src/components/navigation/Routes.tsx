@@ -22,7 +22,7 @@ export const routeDescriptions: RouteDescription[] = [
     createRouteDescription('EXPERIENCES', 'experiences', <ExperiencesView />),
     createRouteDescription('LIFESTYLE', 'lifestyle', <LifestyleView />),
     createRouteDescription('CONTACT', 'contact', <ContactView />),
-    createRouteDescription('PRINT', 'print', <ResumeView />)
+    // createRouteDescription('PRINT', 'print', <ResumeView />)
     
 
 ];

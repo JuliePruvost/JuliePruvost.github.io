@@ -3,24 +3,30 @@ import { ExperienceItem, High, HighSpecial, LabeledIcon, netIcon, reactIcon, typ
 export default function SgIwc({isForPrint}: {isForPrint?: boolean}) {
     return (
         <>
-            <ExperienceItem itemTitle="Period" className="period long" hidden={!isForPrint}>
-                October 2017 to Today
-            </ExperienceItem>
             <ExperienceItem itemTitle="Position">
                 TECH LEAD
+            </ExperienceItem>
+            <ExperienceItem itemTitle="Period" className="period">
+                October 2017 to Today
             </ExperienceItem>
             <ExperienceItem itemTitle="Company">
                 <High>Société Générale Corporate and Investment Banking</High>
             </ExperienceItem>
+            <ExperienceItem itemTitle="Core Techno" className="list">
+                <LabeledIcon icon={netIcon} label='.NET Core'/>
+                <LabeledIcon icon={reactIcon} label='React'/>
+                <LabeledIcon icon={typeScriptIcon} label='TypeScript'/>
+            </ExperienceItem>
             <ExperienceItem itemTitle="Functional Description">
-                Development of a platform to help with the configuration and calculation of proprietary indices (financial products) of Société Générale.
+                Development of a platform to help with the calculation of proprietary indices (financial products) of Société Générale.
             </ExperienceItem>
             <ExperienceItem itemTitle="Team">
                 Between 2 to 5 members with various skill level. Mostly FullStack profiles. <High>International</High> : one member in Bucarest for ~2 years.
             </ExperienceItem>
             <ExperienceItem itemTitle="Key Projects / Roles" className="long">
                 <ul>
-                    <li>Revamping of the old AngularJS website to <HighSpecial>React</HighSpecial> (~50 internal users). Creation of 2 smaller websites.</li>
+                    <li>Revamping of the old AngularJS website to <HighSpecial>React</HighSpecial> (~50 internal users). </li>
+                    <li hidden={isForPrint}>Creation of 2 additional websites.</li>
                     <li>Slicing of the existing monolithic (.NET) api to <High>micro services</High> (.NET Core) with <High>load balancing</High>, <High>monitoring</High> with elk and grafana.</li>
                     <li>Development of a computing grid running python scripts.</li>
                     <li>Mentoring of newcomers, code quality manager.</li>
@@ -28,19 +34,14 @@ export default function SgIwc({isForPrint}: {isForPrint?: boolean}) {
             </ExperienceItem>
             <ExperienceItem itemTitle="Results / Benefits" className="long">
                 <ul>
-                    <li>Great improvement on grid performance (x5 faster) on nightly python script batch.</li>
-                    <li>Time to Market reduced {'(>2 weeks to 1)'} for new group of users to join the platform.</li>
+                    <li>Great improvement of grid performance (x5 faster) on python scripts batch.</li>
+                    <li hidden={isForPrint}>Time to Market reduced {'(>2 weeks to 1)'} for new group of users to join the platform.</li>
                     <li>Production issues have largely decreased, and alerts now often notify us of issues before the users are impacted.</li>
                     <li>Thanks to my involvement in production issues, my good communication with adjacent teams, and the quality of my work, I moved <High>from Consultant to Employee</High> at Société Générale.</li>
                     <li>This first experience in the web/javascript world made me realize how passionate I am about designing good user-friendly interfaces. I will orient my career towards more <HighSpecial>web-focused</HighSpecial> technologies.</li>
                 </ul>
-            </ExperienceItem>
-            <ExperienceItem itemTitle="Core Techno" className="list">
-                <LabeledIcon icon={netIcon} label='.NET Core'/>
-                <LabeledIcon icon={reactIcon} label='React'/>
-                <LabeledIcon icon={typeScriptIcon} label='TypeScript'/>
-            </ExperienceItem>
-            <ExperienceItem itemTitle="Web Techno" className="list">
+            </ExperienceItem>            
+            <ExperienceItem itemTitle="Web Techno" className="list long">
                 <LabeledIconSmall icon={reduxIcon} label='Redux'/>
                 <LabeledIconSmall icon={semanticIcon} label='Semantic UI'/>
                 <LabeledIconSmall icon={agGridIcon} label='AG Grid'/>
