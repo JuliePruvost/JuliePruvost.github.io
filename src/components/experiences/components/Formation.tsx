@@ -7,7 +7,7 @@ export default function Formation() {
                 September 2002 to October 2005
             </ExperienceItem>
             <ExperienceItem itemTitle="Higher Education School">
-                <HighSpecial>ECOLE CENTRALES NANTES</HighSpecial>
+                <HighSpecial>ECOLE CENTRALE NANTES</HighSpecial>
             </ExperienceItem>
             <ExperienceItem itemTitle="Education">
                 Multi-fields scientific education with 1 year focus on IT skills.
