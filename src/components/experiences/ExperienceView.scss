@@ -33,7 +33,9 @@
     padding: 16px 0;
 
     color: var(--primary-color);
-
+    @media print {
+        color: var(--primary-color-l30);
+    }
 
     @media screen and (max-width: 768px) {
         margin: 0 12px;
@@ -42,12 +44,21 @@
     &.position {
         color: var(--accent-color);
         font-weight: 700;
+        @media print {
+            font-weight: 500;
+        }
     }
     &.period {
         font-weight: 700;
+        @media print {
+            font-weight: 500;
+        }
     }
     &.hidden {
         font-weight: 700;
+        @media print {
+            font-weight: 500;
+        }
     }
     &.company {
     }
@@ -75,6 +86,10 @@
     color: var(--primary-color);
     &.special {
         color: var(--accent-color);
+    }
+
+    @media print {
+        font-weight: 500;
     }
 }
 
