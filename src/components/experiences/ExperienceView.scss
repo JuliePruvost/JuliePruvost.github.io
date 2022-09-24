@@ -32,8 +32,10 @@
     margin: 0 36px 0 48px;
     padding: 16px 0;
 
-    color: var(--primary-color-l30);
-
+    color: var(--primary-color);
+    @media print {
+        color: var(--primary-color-l30);
+    }
 
     @media screen and (max-width: 768px) {
         margin: 0 12px;
@@ -41,13 +43,22 @@
 
     &.position {
         color: var(--accent-color);
-        font-weight: 500;
+        font-weight: 700;
+        @media print {
+            font-weight: 500;
+        }
     }
     &.period {
-        font-weight: 500;
+        font-weight: 700;
+        @media print {
+            font-weight: 500;
+        }
     }
     &.hidden {
-        font-weight: 500;
+        font-weight: 700;
+        @media print {
+            font-weight: 500;
+        }
     }
     &.company {
     }
@@ -71,10 +82,14 @@
 }
 
 .experience-item-content-highlighted {
-    font-weight: 500;
+    font-weight: 700;
     color: var(--primary-color);
     &.special {
         color: var(--accent-color);
+    }
+
+    @media print {
+        font-weight: 500;
     }
 }
 

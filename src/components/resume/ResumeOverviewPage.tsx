@@ -39,7 +39,7 @@ const ResumeOverviewSectionTitle = ({label}: {label:string}) => {
 const ExperiencesOverview = () => {
     return (
         <div className="resume-overview-section">
-            <ResumeOverviewSectionTitle label="Experiences" />
+            <ResumeOverviewSectionTitle label="Experience" />
             {resumeOverviewExperienceItems}
         </div>
     );

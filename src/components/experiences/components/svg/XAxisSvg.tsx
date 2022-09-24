@@ -19,15 +19,15 @@ export default function XAxisSvg({
         new Date(2022, 1)
     ];
 
-    const dateIndicators = dates.map(date => {
+    const dateIndicators = dates.map((date, index) => {
         const x = getXFromDate(moment(date));
         return (
-            <>
+            <g key={index}>
                 <text 
                     className={"axis-text"}
                     x={x} 
                     y={dataArea.y - 15}
-                    text-anchor="middle"
+                    textAnchor="middle"
                 >
                     {date.getFullYear()}
                 </text>
@@ -38,7 +38,7 @@ export default function XAxisSvg({
                     x2={x}
                     y2={dataArea.y - 5}
                 />
-            </>
+            </g>
         );
     });
 

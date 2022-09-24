@@ -19,7 +19,7 @@ export const mainRoute = createRouteDescription('Main', '/', <MainView />);
 
 export const routeDescriptions: RouteDescription[] = [
     mainRoute,
-    createRouteDescription('EXPERIENCES', 'experiences', <ExperiencesView />),
+    createRouteDescription('EXPERIENCE', 'experience', <ExperiencesView />),
     createRouteDescription('LIFESTYLE', 'lifestyle', <LifestyleView />),
     createRouteDescription('CONTACT', 'contact', <ContactView />),
     // createRouteDescription('PRINT', 'print', <ResumeView />)

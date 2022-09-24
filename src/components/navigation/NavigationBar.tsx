@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const MainNavigationItem = () => {
     return (
-        <Nav.Item key={0}>
+        <Nav.Item>
             <Nav.Link as={NavLink} to={routeDescriptions[0].path!} className="main-nav-item">
                 <MainNavItemSvg />
             </Nav.Link>
@@ -27,37 +27,32 @@ export default function NavigationBar() {
         setExpanded(false);
     };
 
-    const navigationItems = routeDescriptions.map((routeDescription, index) => {
-        if (!routeDescription.path) {
-            return <></>;
-        }
-        if (routeDescription === mainRoute) {
-            return <></>;
-        }
-    
-        return (
-            <Nav.Item key={index} className="common-nav-item">
-                <Nav.Link as={NavLink} onClick={onItemClick} to={routeDescription.path}>{routeDescription.label}</Nav.Link>
-            </Nav.Item>
-        );
-    });
+    const navigationItems = routeDescriptions
+        .filter(routeDescription => routeDescription.path && routeDescription !== mainRoute)
+        .map((routeDescription, index) => {
+            return (
+                <Nav.Item key={index} className="common-nav-item">
+                    <Nav.Link as={NavLink} onClick={onItemClick} to={routeDescription.path!}>{routeDescription.label}</Nav.Link>
+                </Nav.Item>
+            );
+        });
 
     return (
         <Container>
-        <Navbar expand="sm" expanded={expanded}>
-            <Container >
-                <Navbar.Brand href="#home"><MainNavigationItem /></Navbar.Brand>
-                <Navbar.Toggle onClick={onToggleClick} aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto"
-                        activeKey="/"
-                        // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-                    >
-                        {navigationItems}
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+            <Navbar expand="sm" expanded={expanded}>
+                <Container>
+                    <MainNavigationItem />
+                    <Navbar.Toggle onClick={onToggleClick} aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse key='collapseableNavBar' id="responsive-navbar-nav">
+                        <Nav className="me-auto" 
+                            activeKey="/"
+                            // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+                        >
+                            {navigationItems}
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </Container>
     );
 }

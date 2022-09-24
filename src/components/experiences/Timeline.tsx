@@ -78,15 +78,15 @@ export default function Timeline({
     ));
     */
     const experienceFlatBarsSvg = experiences.map((exp, index) => (
-        <ExperienceFlatBarSvg className="experience-bar" resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
+        <ExperienceFlatBarSvg key={index} className="experience-bar" resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
     ));
 
     const experienceBarsGlow = experiences.map((exp, index) => (
-        <ExperienceBarSvg className="experience-bar-glow" resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
+        <ExperienceBarSvg key={index} className="experience-bar-glow" resume={resume} experienceIndex={index} getXFromDate={getXFromDate} dataArea={dataArea}/>
     ));
 
     const experienceAreasSvg = experiences.map((exp, index) => (
-        <ExperienceAreaSvg resume={resume} experienceIndex={index} getXFromDate={getXFromDate} svgArea={svgArea}/>
+        <ExperienceAreaSvg key={index} resume={resume} experienceIndex={index} getXFromDate={getXFromDate} svgArea={svgArea}/>
     ));
 
     return (
